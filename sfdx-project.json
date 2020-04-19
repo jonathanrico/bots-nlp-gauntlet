@@ -1,0 +1,27 @@
+{
+    "packageDirectories": [
+        {
+            "path": "sfdx-source/main",
+            "default": true,
+            "package": "NLP Gauntlet - bots",
+            "versionName": "Spring 20",
+            "versionDescription": "Nlp Gauntlet - Bot Integration",
+            "versionNumber": "1.0.0.NEXT",
+            "definitionFile": "config/project-scratch-def.json",
+            "dependencies": [
+                {
+                    "package": "NLP Gauntlet - core",
+                    "versionNumber": "1.0.1.LATEST"
+                }
+            ]
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "48.0",
+    "packageAliases": {
+        "NLP Gauntlet - core": "0Ho4R000000CaSjSAK",
+        "NLP Gauntlet - core@1.0.1-1": "04t4R000001Z91wQAC",
+        "NLP Gauntlet - bots": "0Ho4R000000CaTNSA0"
+    }
+}

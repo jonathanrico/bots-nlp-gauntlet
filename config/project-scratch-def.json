@@ -1,0 +1,22 @@
+{
+  "orgName": "Stark Industries",
+  "edition": "Enterprise",
+  "features": [
+      "Chatbot",
+      "ForceComPlatform",
+      "ChatbotExternalNlp"
+  ],
+  "settings": {
+      "botSettings": {
+          "enableBots": true
+      },
+      "lightningExperienceSettings": {
+          "enableS1DesktopEnabled": true
+      },
+      "securitySettings": {
+          "passwordPolicies": {
+              "enableSetPasswordInApi": true
+          }
+      }
+  }
+}
