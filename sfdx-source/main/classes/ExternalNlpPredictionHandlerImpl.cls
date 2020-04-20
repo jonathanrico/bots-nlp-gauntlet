@@ -1,6 +1,15 @@
 public class ExternalNlpPredictionHandlerImpl implements NLPPredictions.PredictionHandler {
 
     /**
+    * Update the following parameters to match your service details
+    */
+	private static final System.Type EXTERNAL_SERVICE_CLASS = ExternalNlpMockService.class;
+    private static final String MODEL_ID = 'YOUR_MODEL_ID';
+    private static final String NAMED_CREDENTIAL_DEV_NAME = 'YOUR_NAMED_CREDENTIAL'; // Case-sensitive
+    private static final Double INTENT_THRESHOLD = 0.7;
+    private static final Double ENTITY_THRESHOLD = 0.7;
+    
+    /**
     * By default, this handler maps external intents to bot intents based on direct name match
     * If intents cannot be matched by name directly, the following map can be updated with the corresponding mappings.
     */
@@ -34,7 +43,7 @@ public class ExternalNlpPredictionHandlerImpl implements NLPPredictions.Predicti
     * NOTE: Reading Custom metadata in PredictionHandler is not supported at the moment
     */
     private ExternalNLPService getExternalNLPService() {
-        return ExternalNlpServiceFactory.makeNlpService(DialogFlowService.class);
+        return ExternalNlpServiceFactory.makeNlpService(EXTERNAL_SERVICE_CLASS);
     }
 
     /**
@@ -44,14 +53,14 @@ public class ExternalNlpPredictionHandlerImpl implements NLPPredictions.Predicti
         // Update these parameters to use a different service provider
         List<ExternalNlpModelParameters> modelParams = new List<ExternalNlpModelParameters>();
         modelParams.add(new ExternalNlpModelParameters.Builder()
-            .setModelId('YOUR_MODEL_ID')
-            .setNamedCredentialKey('YOUR_NAMED_CREDENTIAL') // Case-sensitive
+            .setModelId(MODEL_ID)
+            .setNamedCredentialKey(NAMED_CREDENTIAL_DEV_NAME) // Case-sensitive
             .build());
 
         ExternalNlpServiceParameters serviceParams = new ExternalNlpServiceParameters.Builder()
             .setModelParams(modelParams)
-            .setIntentThreshold((Double)0.7)
-            .setNerThreshold((Double)0.7)
+            .setIntentThreshold(INTENT_THRESHOLD)
+            .setNerThreshold(ENTITY_THRESHOLD)
             .setAdditionalParams(new Map<String, String>())
             .setDisableIntentDetection(disableIntentDetection)
             .setDisableEntityExtraction(disableEntityExtraction)

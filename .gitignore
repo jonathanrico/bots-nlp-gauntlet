@@ -1,0 +1,14 @@
+.vscode/settings.json
+.classpath
+.DS_Store
+.sfdx
+.project
+.salesforce
+.idea
+.tern-project
+.settings
+Referenced Packages
+
+salesforce.schema
+
+unpackaged.zip

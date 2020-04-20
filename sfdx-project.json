@@ -1,7 +1,7 @@
 {
     "packageDirectories": [
         {
-            "path": "sfdx-source/main",
+            "path": "sfdx-source",
             "default": true,
             "package": "NLP Gauntlet - bots",
             "versionName": "Spring 20",
