@@ -1,6 +1,5 @@
 .vscode/settings.json
 .classpath
-.DS_Store
 .sfdx
 .project
 .salesforce
