@@ -3,9 +3,17 @@ public class ExternalNlpPredictionHandlerImpl implements NLPPredictions.Predicti
     /**
     * Update the following parameters to match your service details
     */
-    private static final System.Type EXTERNAL_SERVICE_CLASS = ExternalNlpMockService.class;
+
+    //Replace with your servie class type, e.g. EinsteinAiService.class
+    private static final System.Type EXTERNAL_SERVICE_CLASS = null;
+    
+    // Replace with the model id of your service
     private static final String MODEL_ID = 'YOUR_MODEL_ID';
-    private static final String NAMED_CREDENTIAL_DEV_NAME = 'YOUR_NAMED_CREDENTIAL'; // Case-sensitive
+
+    // Case-sensitive, Replace with the Named Credential name of your service
+    private static final String NAMED_CREDENTIAL_DEV_NAME = 'YOUR_NAMED_CREDENTIAL';
+
+    // Customize entity/intent thresholds (if needed)
     private static final Double INTENT_THRESHOLD = 0.7;
     private static final Double ENTITY_THRESHOLD = 0.7;
     
@@ -13,7 +21,7 @@ public class ExternalNlpPredictionHandlerImpl implements NLPPredictions.Predicti
     * By default, this handler maps external intents to bot intents based on direct name match
     * If intents cannot be matched by name directly, the following map can be updated with the corresponding mappings.
     */
-    private static final Map<String, String> CUSTOM_INTENT_MAPPINGS = new Map<String, String>{
+    private static final Map<String, String> CUSTOM_INTENT_MAPPINGS = new Map<String, String> {
         'EXTERNAL_INTENT_NAME' => 'INTERNAL_INTENT_NAME'
     };
     
@@ -29,7 +37,7 @@ public class ExternalNlpPredictionHandlerImpl implements NLPPredictions.Predicti
     *    'External_Apt_Type' => 'Appointment_Type'
     *
     */
-    private static final Map<String, String> CUSTOM_ENTITY_MAPPINGS = new Map<String, String>{
+    private static final Map<String, String> CUSTOM_ENTITY_MAPPINGS = new Map<String, String> {
         'EXTERNAL_ENTITY_NAME' => 'FULLY_QUALIFIED_SLOT_CLASS_NAME'
     };
 
@@ -43,7 +51,7 @@ public class ExternalNlpPredictionHandlerImpl implements NLPPredictions.Predicti
     * NOTE: Reading Custom metadata in PredictionHandler is not supported at the moment
     */
     private ExternalNLPService getExternalNLPService() {
-        return ExternalNlpServiceFactory.makeNlpService(EXTERNAL_SERVICE_CLASS);
+        return ExternalNlpServiceFactory.makeNlpService(!Test.isRunningTest() ? EXTERNAL_SERVICE_CLASS : ExternalNlpMockService.class);
     }
 
     /**
