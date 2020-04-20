@@ -3,7 +3,7 @@ public class ExternalNlpPredictionHandlerImpl implements NLPPredictions.Predicti
     /**
     * Update the following parameters to match your service details
     */
-	private static final System.Type EXTERNAL_SERVICE_CLASS = ExternalNlpMockService.class;
+    private static final System.Type EXTERNAL_SERVICE_CLASS = ExternalNlpMockService.class;
     private static final String MODEL_ID = 'YOUR_MODEL_ID';
     private static final String NAMED_CREDENTIAL_DEV_NAME = 'YOUR_NAMED_CREDENTIAL'; // Case-sensitive
     private static final Double INTENT_THRESHOLD = 0.7;
