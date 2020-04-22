@@ -10,3 +10,17 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+**/Einstein_Platform_Services_Certificate.crt
+**/Einstein_Platform_Services_Certificate.crt-meta.xml
+**/AppSwitcher.appMenu-meta.xml
+
+**/sfdc_chatbot_service_permset.permissionset-meta.xml
+**/EinsteinBotsV2.wapp*
+**/EinsteinBotsV2.wdash*
+**/EinsteinBotsV2.wdf*
+**/EinsteinBotsV2.wds*
+# Ignored community profile due to issues when deploying to certain non-scratch org editions
+**/bots-examples Profile.profile-meta.xml
+**/.audience
+**/Admin.profile-meta.xml

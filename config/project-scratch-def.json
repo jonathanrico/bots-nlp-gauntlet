@@ -1,22 +1,48 @@
 {
-  "orgName": "Stark Industries",
-  "edition": "Enterprise",
-  "features": [
-      "Chatbot",
-      "ForceComPlatform",
-      "ChatbotExternalNlp"
-  ],
-  "settings": {
-      "botSettings": {
-          "enableBots": true
-      },
-      "lightningExperienceSettings": {
-          "enableS1DesktopEnabled": true
-      },
-      "securitySettings": {
-          "passwordPolicies": {
-              "enableSetPasswordInApi": true
-          }
-      }
+    "orgName": "Salesforce",
+    "edition": "Enterprise",
+    "features": [
+        "Communities",
+        "Sites",
+        "ServiceCloud",
+        "LightningServiceConsole",
+        "LiveAgent",
+        "LiveMessage",
+        "Chatbot",
+        "ChatbotExternalNlp",
+        "Knowledge",
+        "DevelopmentWave",
+        "ForceComPlatform",
+        "AddCustomTabs:20",
+        "AddCustomObjects:20",
+        "AddCustomApps:20"
+    ],
+    "settings": {
+        "liveAgentSettings": {
+            "enableLiveAgent": true
+        },
+        "botSettings": {
+            "enableBots": true
+        },
+        "omniChannelSettings": {
+            "enableOmniChannel": true
+        },
+        "caseSettings": {
+            "systemUserEmail": "support@acme.com"
+        },
+        "knowledgeSettings":{
+            "enableKnowledge": true
+        },
+        "communitiesSettings": {
+            "enableNetworksEnabled": true
+        },
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "securitySettings": {
+            "passwordPolicies": {
+                "enableSetPasswordInApi": true
+            }
+        }
+    }
   }
-}
