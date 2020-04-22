@@ -4,7 +4,7 @@ This project includes a pre-built NLPPredictions handler ready to be used with S
 
 # Installation instructions
 
-IMPORTANT: This project can only be deployed/installed in an org that satisfy the followig pre-requisites:
+IMPORTANT: This project can only be deployed/installed in an org that satisfy the following pre-requisites:
 
 1- The NLP Gauntlet Core Project must be deployed/installed first in the target org : https://github.com/forcedotcom/nlp-gauntlet
 
